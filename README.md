@@ -34,7 +34,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 ```json
 {
-  "TOKEN": "",
+  "TOKEN": "NzcxMzA3MjEwNTI5NTcwODE2.X5qN0Q.vwQGdDj9eLY-btxvLR1hlVAreWA",
   "YOUTUBE_API_KEY": "",
   "SOUNDCLOUD_CLIENT_ID": "",
   "MAX_PLAYLIST_SIZE": 10,
