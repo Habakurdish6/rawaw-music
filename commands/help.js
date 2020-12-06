@@ -10,7 +10,7 @@ module.exports = {
     let helpEmbed = new MessageEmbed()
       .setTitle(`${message.client.user.username} Help`)
       .setDescription("List of all commands")
-      .setColor("BLAK");
+      .setColor("#ad7ec2");
 
     commands.forEach((cmd) => {
       helpEmbed.addField(
