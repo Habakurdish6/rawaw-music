@@ -83,4 +83,4 @@ client.on("message", async (message) => {
 });
 ///token bot///
 
-client.login("")
+client.login("NzcxMzA3MjEwNTI5NTcwODE2.X5qN0Q.vwQGdDj9eLY-btxvLR1hlVAreWA")
