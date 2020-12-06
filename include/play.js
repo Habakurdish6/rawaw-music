@@ -80,13 +80,13 @@ module.exports = {
 
     try {
       var playingMessage = await queue.textChannel.send(`🎶 Started playing: **${song.title}** ${song.url}`);
+      await playingMessage.react("⏮");
       await playingMessage.react("⏭");
-      await playingMessage.react("⏯");
       await playingMessage.react("🔇");
       await playingMessage.react("🔉");
       await playingMessage.react("🔊");
       await playingMessage.react("🔁");
-      await playingMessage.react("⏹");
+      await playingMessage.react("🔕");
     } catch (error) {
       console.error(error);
     }
