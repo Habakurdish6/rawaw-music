@@ -1,6 +1,6 @@
 module.exports = {
   name: "clip",
-  description: "Plays a clip sound",
+  description: "__`Plays a clip sound`__",
   async execute(message, args) {
     const { channel } = message.member.voice;
     const queue = message.client.queue.get(message.guild.id);

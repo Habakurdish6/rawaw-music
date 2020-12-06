@@ -3,7 +3,7 @@ const { canModifyQueue } = require("../util/EvobotUtil");
 module.exports = {
   name: "skipto",
   aliases: ["st"],
-  description: "Skip to the selected queue number",
+  description: "__`Skip to the selected queue number`__",
   execute(message, args) {
     if (!args.length || isNaN(args[0]))
       return message

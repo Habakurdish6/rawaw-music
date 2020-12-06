@@ -4,7 +4,7 @@ module.exports = {
   name: "queue",
   cooldown: 5,
   aliases: ["q"],
-  description: "Show the music queue and now playing.",
+  description: "__`Show the music queue and now playing`__.",
   async execute(message) {
     const permissions = message.channel.permissionsFor(message.client.user);
     if (!permissions.has(["MANAGE_MESSAGES", "ADD_REACTIONS"]))
@@ -73,7 +73,7 @@ function generateQueueEmbed(message, queue) {
     const embed = new MessageEmbed()
       .setTitle("Song Queue\n")
       .setThumbnail(message.guild.iconURL())
-      .setColor("#F8AA2A")
+      .setColor("#ad7ec2")
       .setDescription(`**Current Song - [${queue[0].title}](${queue[0].url})**\n\n${info}`)
       .setTimestamp();
     embeds.push(embed);
