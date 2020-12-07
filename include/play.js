@@ -86,7 +86,7 @@ module.exports = {
       await playingMessage.react("🔉");
       await playingMessage.react("🔊");
       await playingMessage.react("🔁");
-      await playingMessage.react("🔕");
+      await playingMessage.react("⏹");
     } catch (error) {
       console.error(error);
     }
