@@ -4,7 +4,7 @@ const { canModifyQueue } = require("../util/EvobotUtil");
 module.exports = {
   name: "move",
   aliases: ["mv"],
-  description: "__`Move songs around in the queue`__",
+  description: "{Move songs around in the queue}",
   execute(message, args) {
     const queue = message.client.queue.get(message.guild.id);
     if (!queue) return message.channel.send("There is no queue.").catch(console.error);

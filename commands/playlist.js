@@ -9,7 +9,7 @@ module.exports = {
   name: "playlist",
   cooldown: 5,
   aliases: ["pl"],
-  description: "__`Play a playlist from youtube`__",
+  description: "{Play a playlist from youtube}",
   async execute(message, args) {
     const { channel } = message.member.voice;
     const serverQueue = message.client.queue.get(message.guild.id);
