@@ -38,7 +38,7 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
   "YOUTUBE_API_KEY": "",
   "SOUNDCLOUD_CLIENT_ID": "",
   "MAX_PLAYLIST_SIZE": 10,
-  "PREFIX": "/",
+  "PREFIX": "a!",
   "PRUNING": false,
   "STAY_TIME": 30
 }
@@ -75,8 +75,8 @@ Examples: `1` or `1,2,3`
 * 🔎 Play youtube playlists via search query
 
 `/playlist linkin park meteora`
-* Now Playing (/np)
-* Queue system (/queue, /q)
+* Now Playing (a!np)
+* Queue system (queue, /q)
 * Loop / Repeat (/loop)
 * Shuffle (/shuffle)
 * Volume control (/volume, /v)

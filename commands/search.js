@@ -5,7 +5,7 @@ const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 
 module.exports = {
   name: "allbum",
-  description: "☾allbum and select videos to play☽",
+  description: "✦allbum and select videos to play✦",
   async execute(message, args) {
     if (!args.length)
       return message

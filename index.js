@@ -10,7 +10,7 @@ const client = new Client({ disableMentions: "everyone" });
 
 client.login("Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.ep2WENYzsZ3--syxnyZmnn14uBQ");
 client.commands = new Collection();
-client.prefix = PREFIX;
+client.prefix = PREFIX;("a!")
 client.queue = new Map();
 const cooldowns = new Collection();
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
