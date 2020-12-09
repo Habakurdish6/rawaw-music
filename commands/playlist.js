@@ -9,7 +9,7 @@ module.exports = {
   name: "playlist",
   cooldown: 5,
   aliases: ["pl"],
-  description: "{Play a playlist from youtube}",
+  description: "Play a playlist from youtube",
   async execute(message, args) {
     const { channel } = message.member.voice;
     const serverQueue = message.client.queue.get(message.guild.id);
@@ -91,7 +91,7 @@ module.exports = {
       .setTitle(`${playlist.title}`)
       .setDescription(songs.map((song, index) => `${index + 1}. ${song.title}`))
       .setURL(playlist.url)
-      .setColor("#ad7ec2")
+      .setColor("#F8AA2A")
       .setTimestamp();
 
     if (playlistEmbed.description.length >= 2048)
