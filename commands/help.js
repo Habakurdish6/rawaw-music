@@ -22,6 +22,6 @@ module.exports = {
 
     helpEmbed.setTimestamp();
 
-    return message.channel.send(helpEmbed).catch(console.error);
+    return message.Channel.send(helpEmbed).catch(console.error);
   }
 };
