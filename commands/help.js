@@ -3,13 +3,13 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "help",
   aliases: ["h"],
-  description: "✦All command bot astera✦",
+  description: "✦all commands bot✦",
   execute(message) {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
       .setTitle(`${message.client.user.username} Help`)
-      .setDescription("✦List all commands✦")
+      .setDescription("List of all commands")
       .setColor("#ed80a7");
 
     commands.forEach((cmd) => {
