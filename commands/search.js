@@ -4,8 +4,8 @@ const { YOUTUBE_API_KEY } = require("../util/EvobotUtil");
 const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 
 module.exports = {
-  name: "search",
-  description: "Search and select videos to play",
+  name: "allbum",
+  description: "allbum and select videos to play",
   async execute(message, args) {
     if (!args.length)
       return message
