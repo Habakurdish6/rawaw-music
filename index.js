@@ -8,9 +8,9 @@ const { TOKEN, PREFIX } = require("./util/EvobotUtil");
 
 const client = new Client({ disableMentions: "everyone" });
 
-client.login("Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.IIVJOlQTVTNmBx_DONI9q1uSuXg");
+client.login(TOKEN);
 client.commands = new Collection();
-client.prefix = ("a!");
+client.prefix = PREFIX;
 client.queue = new Map();
 const cooldowns = new Collection();
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -83,4 +83,4 @@ client.on("message", async (message) => {
 });
 ///token bot///
 
-client.login("Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.IIVJOlQTVTNmBx_DONI9q1uSuXg")
+client.login("")

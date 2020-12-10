@@ -34,11 +34,11 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 ```json
 {
-  "TOKEN": "Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.IIVJOlQTVTNmBx_DONI9q1uSuXg",
+  "TOKEN": "NzcxMzA3MjEwNTI5NTcwODE2.X5qN0Q.vwQGdDj9eLY-btxvLR1hlVAreWA",
   "YOUTUBE_API_KEY": "",
   "SOUNDCLOUD_CLIENT_ID": "",
   "MAX_PLAYLIST_SIZE": 10,
-  "PREFIX": "+",
+  "PREFIX": "/",
   "PRUNING": false,
   "STAY_TIME": 30
 }
@@ -75,21 +75,21 @@ Examples: `1` or `1,2,3`
 * 🔎 Play youtube playlists via search query
 
 `/playlist linkin park meteora`
-+ Now Playing (/np)
-+ Queue system (/queue, /q)
-+ Loop / Repeat (/loop)
-+ Shuffle (/shuffle)
-+ Volume control (/volume, /v)
-+ Lyrics (/lyrics, /ly)
-+ Pause (/pause)
-+ Resume (/resume, /r)
-+ Skip (/skip, /s)
-+ Skip to song # in queue (/skipto, /st)
-+ Remove song # from queue (/remove, /rm)
-+ Toggle pruning of bot messages (/pruning)
-+ Help (/help, /h)
-+ Command Handler from [discordjs.guide](https://discordjs.guide/)
-+ Media Controls via Reactions
+* Now Playing (/np)
+* Queue system (/queue, /q)
+* Loop / Repeat (/loop)
+* Shuffle (/shuffle)
+* Volume control (/volume, /v)
+* Lyrics (/lyrics, /ly)
+* Pause (/pause)
+* Resume (/resume, /r)
+* Skip (/skip, /s)
+* Skip to song # in queue (/skipto, /st)
+* Remove song # from queue (/remove, /rm)
+* Toggle pruning of bot messages (/pruning)
+* Help (/help, /h)
+* Command Handler from [discordjs.guide](https://discordjs.guide/)
+* Media Controls via Reactions
 ![reactions](https://i.imgur.com/j7CevsH.png)
 
 ## 🤝 Contributing
