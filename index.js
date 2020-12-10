@@ -10,7 +10,7 @@ const client = new Client({ disableMentions: "everyone" });
 
 client.login("Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.ZzlOZGTfPohBhISMRSF5LMIL1cg");
 client.commands = new Collection();
-client.prefix = "a!";
+client.prefix = PREFIX;
 client.queue = new Map();
 const cooldowns = new Collection();
 const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -20,7 +20,7 @@ const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  */
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
-  client.user.setActivity(`${"a"}help and ${"a!"}play`, { type: "LISTENING" });
+  client.user.setActivity(`${PREFIX}help and ${PREFIX}play`, { type: "LISTENING" });
 });
 client.on("warn", info => console.log(info));
 client.on("error", console.error);
