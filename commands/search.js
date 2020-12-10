@@ -5,7 +5,7 @@ const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 
 module.exports = {
   name: "allbum",
-  description: "allbum and select videos to play",
+  description: "✦allbum and select videos to play✦",
   async execute(message, args) {
     if (!args.length)
       return message
@@ -21,7 +21,7 @@ module.exports = {
     let resultsEmbed = new MessageEmbed()
       .setTitle(`**Reply with the song number you want to play**`)
       .setDescription(`Results for: ${search}`)
-      .setColor("#F8AA2A");
+      .setColor("#ed80a7");
 
     try {
       const results = await youtube.searchVideos(search, 10);

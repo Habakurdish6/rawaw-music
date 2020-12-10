@@ -10,7 +10,7 @@ module.exports = {
   name: "play",
   cooldown: 3,
   aliases: ["p"],
-  description: "Plays audio from YouTube or Soundcloud",
+  description: "✦Plays audio from YouTub✦",
   async execute(message, args) {
     const { channel } = message.member.voice;
 
@@ -33,8 +33,8 @@ module.exports = {
     const search = args.join(" ");
     const videoPattern = /^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com|youtu\.?be)\/.+$/gi;
     const playlistPattern = /^.*(list=)([^#\&\?]*).*/gi;
-    const scRegex = /^https?:\/\/(soundcloud\.com)\/(.*)$/;
-    const mobileScRegex = /^https?:\/\/(soundcloud\.app\.goo\.gl)\/(.*)$/;
+    const scRegex = /^https?:\/\/(soundcloud\.com)\/(.a!)$/;
+    const mobileScRegex = /^https?:\/\/(soundcloud\.app\.goo\.gl)\/(.a!)$/;
     const url = args[0];
     const urlValid = videoPattern.test(args[0]);
 

@@ -3,7 +3,7 @@ const { canModifyQueue } = require("../util/EvobotUtil");
 module.exports = {
   name: "loop",
   aliases: ["l"],
-  description: "Toggle music loop",
+  description: "✦Toggle music loop✦",
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
     if (!queue) return message.reply("There is nothing playing.").catch(console.error);

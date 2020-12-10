@@ -4,7 +4,7 @@ module.exports = {
   name: "queue",
   cooldown: 5,
   aliases: ["q"],
-  description: "Show the music queue and now playing.",
+  description: "✦Show the music queue and now playing✦.",
   async execute(message) {
     const permissions = message.channel.permissionsFor(message.client.user);
     if (!permissions.has(["MANAGE_MESSAGES", "ADD_REACTIONS"]))

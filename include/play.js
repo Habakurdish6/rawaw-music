@@ -76,7 +76,7 @@ module.exports = {
         queue.songs.shift();
         module.exports.play(queue.songs[0], message);
       });
-    dispatcher.setVolumeLogarithmic(queue.volume / 100);
+    dispatcher.setVolumeLogarithmic(queue.volume / 150);
 
     try {
       var playingMessage = await queue.textChannel.send(`🎶 Started playing: **${song.title}** ${song.url}`);
@@ -128,7 +128,7 @@ module.exports = {
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           if (queue.volume <= 0) {
-            queue.volume = 100;
+            queue.volume = 150;
             queue.connection.dispatcher.setVolumeLogarithmic(100 / 100);
             queue.textChannel.send(`${user} 🔊 unmuted the music!`).catch(console.error);
           } else {
@@ -152,7 +152,7 @@ module.exports = {
         case "🔊":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member) || queue.volume == 100) return;
-          if (queue.volume + 10 >= 100) queue.volume = 100;
+          if (queue.volume + 10 >= 150) queue.volume = 100;
           else queue.volume = queue.volume + 10;
           queue.connection.dispatcher.setVolumeLogarithmic(queue.volume / 100);
           queue.textChannel
