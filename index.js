@@ -8,9 +8,9 @@ const { TOKEN, PREFIX } = require("./util/EvobotUtil");
 
 const client = new Client({ disableMentions: "everyone" });
 
-client.login("Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.ep2WENYzsZ3--syxnyZmnn14uBQ");
+client.login("Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.IIVJOlQTVTNmBx_DONI9q1uSuXg");
 client.commands = new Collection();
-client.prefix = PREFIX;("a!")
+client.prefix = ("a!");
 client.queue = new Map();
 const cooldowns = new Collection();
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -30,7 +30,7 @@ client.on("error", console.error);
  */
 const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
 for (const file of commandFiles) {
-  const command = require(join(__dirname, "commands", `${file}`));
+ const command = require(join(__dirname, "commands", `${file}`));
   client.commands.set(command.name, command);
 }
 
@@ -81,3 +81,6 @@ client.on("message", async (message) => {
     message.reply("There was an error executing that command.").catch(console.error);
   }
 });
+///token bot///
+
+client.login("Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.IIVJOlQTVTNmBx_DONI9q1uSuXg")

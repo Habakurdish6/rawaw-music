@@ -34,11 +34,11 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 ```json
 {
-  "TOKEN": "",
+  "TOKEN": "Nzg2MDQxNjI0MjYxMjk2MTM5.X9AoTw.IIVJOlQTVTNmBx_DONI9q1uSuXg",
   "YOUTUBE_API_KEY": "",
   "SOUNDCLOUD_CLIENT_ID": "",
   "MAX_PLAYLIST_SIZE": 10,
-  "PREFIX": "a!",
+  "PREFIX": "+",
   "PRUNING": false,
   "STAY_TIME": 30
 }
@@ -46,21 +46,21 @@ Copy or Rename `config.json.example` to `config.json` and fill out the values:
 
 ## 📝 Features & Commands
 
-> Note: The default prefix is 'a!'
+> Note: The default prefix is '/'
 
-a! 🎶 Play music from YouTube via url
+* 🎶 Play music from YouTube via url
 
 `/play https://www.youtube.com/watch?v=GLvohMXgcBo`
 
-a! 🔎 Play music from YouTube via search query
+* 🔎 Play music from YouTube via search query
 
 `/play under the bridge red hot chili peppers`
 
-a! 🎶 Play music from Soundcloud via url
+* 🎶 Play music from Soundcloud via url
 
 `/play https://soundcloud.com/blackhorsebrigade/pearl-jam-alive`
 
-a! 🔎 Search and select music to play
+* 🔎 Search and select music to play
 
 `/search Pearl Jam`
 
@@ -68,28 +68,28 @@ Reply with song number or numbers seperated by comma that you wish to play
 
 Examples: `1` or `1,2,3`
 
-a! 📃 Play youtube playlists via url
+* 📃 Play youtube playlists via url
 
 `/playlist https://www.youtube.com/watch?v=YlUKcNNmywk&list=PL5RNCwK3GIO13SR_o57bGJCEmqFAwq82c`
 
-a! 🔎 Play youtube playlists via search query
+* 🔎 Play youtube playlists via search query
 
 `/playlist linkin park meteora`
-a! Now Playing (a!np)
-a! Queue system (a!queue, a!q)
-a! Loop / Repeat (a!loop)
-a! Shuffle (a!shuffle)
-a! Volume control (a!volume, a!v)
-a! Lyrics (a!lyrics, a!ly)
-a! Pause (a!pause)
-a! Resume (a!resume, a!r)
-a! Skip (a!skip, a!s)
-a! Skip to song # in queue (a!skipto, a!st)
-a! Remove song # from queue (a!remove, a!rm)
-a! Toggle pruning of bot messages (a!pruning)
-a! Help (a!help, a!h)
-a! Command Handler from [discordjs.guide](https://discordjs.guide/)
-a! Media Controls via Reactions
++ Now Playing (/np)
++ Queue system (/queue, /q)
++ Loop / Repeat (/loop)
++ Shuffle (/shuffle)
++ Volume control (/volume, /v)
++ Lyrics (/lyrics, /ly)
++ Pause (/pause)
++ Resume (/resume, /r)
++ Skip (/skip, /s)
++ Skip to song # in queue (/skipto, /st)
++ Remove song # from queue (/remove, /rm)
++ Toggle pruning of bot messages (/pruning)
++ Help (/help, /h)
++ Command Handler from [discordjs.guide](https://discordjs.guide/)
++ Media Controls via Reactions
 ![reactions](https://i.imgur.com/j7CevsH.png)
 
 ## 🤝 Contributing

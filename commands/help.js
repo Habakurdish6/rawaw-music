@@ -3,14 +3,14 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "help",
   aliases: ["h"],
-  description: "✦all commands bot✦",
+  description: "{Display all commands and descriptions}",
   execute(message) {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
       .setTitle(`${message.client.user.username} Help`)
-      .setDescription("List of all commands")
-      .setColor("#ed80a7");
+      .setDescription("__`List of all commands`__")
+      .setColor("#ad7ec2");
 
     commands.forEach((cmd) => {
       helpEmbed.addField(
@@ -22,6 +22,6 @@ module.exports = {
 
     helpEmbed.setTimestamp();
 
-    return message.Channel.send(helpEmbed).catch(console.error);
+    return message.channel.send(helpEmbed).catch(console.error);
   }
 };
