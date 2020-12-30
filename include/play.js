@@ -19,7 +19,7 @@ module.exports = {
     const queue = message.client.queue.get(message.guild.id);
 
     if (!song) {
-      setTimeout(function () {
+      setTimeout(function() {
         if (queue.connection.dispatcher && message.guild.me.voice.channel) return;
         queue.channel.leave();
         queue.textChannel.send("Leaving voice channel...");
@@ -71,7 +71,7 @@ module.exports = {
           module.exports.play(queue.songs[0], message);
         }
       })
-      .on("error", (err) => {
+      .on("error", err => {
         console.error(err);
         queue.songs.shift();
         module.exports.play(queue.songs[0], message);

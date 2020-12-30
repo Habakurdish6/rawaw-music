@@ -17,7 +17,7 @@ WORKDIR /home/evobot
 
 COPY package*.json ./
 RUN npm install
-VOLUME [ "/home/evobot" ]
+VOLUME [ "/home/musicbot" ]
 
 COPY . .
 
