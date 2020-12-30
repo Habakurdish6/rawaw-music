@@ -1,83 +1,95 @@
 /**
- * Module Imports
+ * Module Imports////revou
  */
-const { Client, Collection } = require("discord.js");
-const { readdirSync } = require("fs");
-const { join } = require("path");
-const { TOKEN, PREFIX } = require("./util/EvobotUtil");
-
-const client = new Client({ disableMentions: "everyone" });
-
-client.login("");
-client.commands = new Collection();
-client.prefix = PREFIX;("a!")
-client.queue = new Map();
+const { Client, Collection } = require("discord.js"); //revou
+const { readdirSync } = require("fs"); //revou
+const { join } = require("path"); //revou
+const { TOKEN, PREFIX } = require("./util/EvobotUtil"); //revou
+//revou
+const client = new Client({ disableMentions: "everyone" }); //revou
+//revou
+client.login(""); ///revou
+client.commands = new Collection(); ////reva
+client.prefix = PREFIX;
+("a!");
+client.queue = new Map(); ////revou
 const cooldowns = new Collection();
-const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); ////revou
 
 /**
- * Client Events
+ * Client Events /////revou
  */
 client.on("ready", () => {
+  //revou
   console.log(`${client.user.username} ready!`);
-  client.user.setActivity(`${PREFIX}help and ${PREFIX}play`, { type: "LISTENING" });
+  client.user.setActivity(`${PREFIX}help and ${PREFIX}play`, { type: "LISTENING" }); //..//..//revou
 });
-client.on("warn", (info) => console.log(info));
-client.on("error", console.error);
-
+client.on("warn", info => console.log(info)); ///revou
+client.on("error", console.error); //revou
+///revou
 /**
- * Import all commands
+ * Import all commands.////revoi
  */
-const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
+const commandFiles = readdirSync(join(__dirname, "commands")).filter(file => file.endsWith(".js")); ///revou
 for (const file of commandFiles) {
-  const command = require(join(__dirname, "commands", `${file}`));
-  client.commands.set(command.name, command);
-}
+  const command = require(join(__dirname, "commands", `${file}`)); ///revou
+  client.commands.set(command.name, command); //revou
+} //revou
+//revou
+client.on("message", async message => {
+  ///revou
+  if (message.author.bot) return; //revou
+  if (!message.guild) return; //revou
+  ///revou
+  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`); //\\revou
+  if (!prefixRegex.test(message.content)) return; ////revou
 
-client.on("message", async (message) => {
-  if (message.author.bot) return;
-  if (!message.guild) return;
+  const [, matchedPrefix] = message.content.match(prefixRegex); ///revou
+  ///revou///revou///
+  const args = message.content
+    .slice(matchedPrefix.length)
+    .trim()
+    .split(/ +/); //revou
+  const commandName = args.shift().toLowerCase(); ////revou
 
-  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
-  if (!prefixRegex.test(message.content)) return;
-
-  const [, matchedPrefix] = message.content.match(prefixRegex);
-
-  const args = message.content.slice(matchedPrefix.length).trim().split(/ +/);
-  const commandName = args.shift().toLowerCase();
-
-  const command =
-    client.commands.get(commandName) ||
-    client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(commandName));
-
-  if (!command) return;
+  const command = ////revou
+    client.commands.get(commandName) || /////revou
+    client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName)); ////revou//////
+  ///revou
+  if (!command) return; /////revou
 
   if (!cooldowns.has(command.name)) {
-    cooldowns.set(command.name, new Collection());
-  }
+    ////revou
+    cooldowns.set(command.name, new Collection()); /////revou
+  } ////revou
 
-  const now = Date.now();
-  const timestamps = cooldowns.get(command.name);
-  const cooldownAmount = (command.cooldown || 1) * 1000;
-
+  const now = Date.now(); /////revou
+  const timestamps = cooldowns.get(command.name); //////revou
+  const cooldownAmount = (command.cooldown || 1) * 1000; ////revou
+  ///revou
   if (timestamps.has(message.author.id)) {
-    const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+    ////revou
+    const expirationTime = timestamps.get(message.author.id) + cooldownAmount; ////revou
 
     if (now < expirationTime) {
-      const timeLeft = (expirationTime - now) / 1000;
+      ////revou
+      const timeLeft = (expirationTime - now) / 1000; ////revou
       return message.reply(
-        `please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`
+        ////reevou
+        `please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.` ///revou
       );
     }
   }
 
-  timestamps.set(message.author.id, now);
-  setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+  timestamps.set(message.author.id, now); ////revou
+  setTimeout(() => timestamps.delete(message.author.id), cooldownAmount); /////revou
 
   try {
-    command.execute(message, args);
+    /////revoi
+    command.execute(message, args); ////revou
   } catch (error) {
-    console.error(error);
-    message.reply("There was an error executing that command.").catch(console.error);
+    ////revou
+    console.error(error); /////revou
+    message.reply("There was an error executing that command.").catch(console.error); /////revou
   }
-});
+}); /////revou

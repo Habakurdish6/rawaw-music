@@ -1,7 +1,7 @@
 {
-  "name": "EvoBot",
-  "description": "🤖 Discord Music Bot built with discord.js",
-  "repository": "https://github.com/eritislami/evobot",
-  "logo": "https://i.imgur.com/JFxgbWH.png",
+  "name": "لێرە ناوی بۆتەکە بنووسە",
+  "description": "لێرە شتێک دانی بۆ خوارەوەی بۆتەکە",
+  "repository": "لێرە لینکی پرۆجێکتی بۆتەکە لە گێت ھاب دامێ",
+  "logo": "لێرە لۆگۆکە دانێ",
   "keywords": ["discord", "discordjs", "music", "bot"]
 }
