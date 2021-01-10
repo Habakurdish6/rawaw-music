@@ -8,10 +8,10 @@ const { TOKEN, PREFIX } = require("./util/EvobotUtil"); //revou
 //revou
 const client = new Client({ disableMentions: "everyone" }); //revou
 //revou
-client.login("لێرە تۆکینی بۆتەکە دانێ"); ///revou
+client.login("Nzc2MTAxMDAzMDI3MTUyODk2.X6v-Yg.DoGk4LeJhKNyc8G3FbdVrNgJvqs"); ///revou
 client.commands = new Collection(); ////reva
 client.prefix = PREFIX;
-("لێرە کۆمماندی بۆتەکە دانێ");
+("!");
 client.queue = new Map(); ////revou
 const cooldowns = new Collection();
 const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); ////revou
