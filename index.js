@@ -8,7 +8,7 @@ const { TOKEN, PREFIX } = require("./util/EvobotUtil"); //revou
 //revou
 const client = new Client({ disableMentions: "everyone" }); //revou
 //revou
-client.login("Nzc2MTAxMDAzMDI3MTUyODk2.X6v-Yg.DoGk4LeJhKNyc8G3FbdVrNgJvqs"); ///revou
+client.login("Nzc2MTAxMDAzMDI3MTUyODk2.X6v-Yg.1lrMjDjpCnqmJr9ONgnJWThRYLU"); ///revou
 client.commands = new Collection(); ////reva
 client.prefix = PREFIX;
 ("!");
